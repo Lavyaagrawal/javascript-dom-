@@ -1,9 +1,6 @@
-var books=document.querySelectorAll('#book-list li .name')
-Array.from(books).forEach(function(book){
-    book.textContent+='(book title)';
-    console.log(book.textContent)
-})
-const booklist=document.querySelector('#book-list');
-console.log(booklist.innerHTML)
-booklist.innerHTML='<h2> Books and More Books<h2>'
-booklist.innerHTML+='<p> this is how you add html<p>'
+const banner=document.querySelector('#page-banner')
+console.log('#page-baner node type is:',banner.nodeType)
+console.log("#page-baner node type is:", banner.nodeName);
+console.log("#page-baner has child node:", banner.hasChildNodes());
+const clonedBanner=banner.cloneNode(true);
+console.log(clonedBanner);
