@@ -1,8 +1,18 @@
-const booklist = document.querySelector("#book-list");
-console.log("book-list next siibling is:", booklist.nextSibling);
-console.log("book-list next element siibling is:", booklist.nextElementSibling);
+var h2=document.querySelector("#book-list h2");
+console.log(h2)
+h2.addEventListener('click',function(e){
+    console.log(e.target)
+    console.log(e)
+});
+var btns=document.querySelectorAll("#book-list .delete")
+Array.from(btns).forEach(function(btn){
+    btn.addEventListener('click',function(e){
+        const li=e.target.parentElement;
+        li.parentNode.removeChild(li)
+        });
 
-console.log("book-list previous siibling is:", booklist.previousSibling);
-console.log("book-list next previous siibling is:", booklist.previousElementSibling);
+    
 
-booklist.previousElementSibling.querySelector("p").innerHTML+='<br/>TOO COOL FOR EVEYONE ELSE' 
+
+});
+
